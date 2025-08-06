@@ -58,8 +58,8 @@ func main() {
 	// Wrap with middleware
 	handler := loggerMiddleware(recoverMiddleware(mux))
 
-	log.Println("Server is running on http://localhost:8080")
-	if err := http.ListenAndServe(":8080", handler); err != nil {
+	log.Println("Server is running on http://localhost:9000")
+	if err := http.ListenAndServe(":9000", handler); err != nil {
 		log.Fatal(err)
 	}
 }
